@@ -11,7 +11,7 @@
     <!-- Button -->
     <div class="p-4">
         <button id="toggleSidebar" class="px-4 py-2 mb-2 bg-blue-600 text-white rounded cursor-pointer">
-            Toggle Sidebar
+            Apply
         </button>
 
     </div>
@@ -71,33 +71,13 @@
                             <span class="text-red-500" aria-hidden="true">*</span>
                             <span class="sr-only">required</span>
                         </label>
-
+                        <!-- <select name="scholarshipType" required> -->
                         <select id="scholarshipType" name="scholarshipType" required="" aria-required="true"
                             class="bg-gray-400 rounded-md shadow-md p-2 w-full transition focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 focus:outline-none">
                             <option value="">Choose a Scholarship</option>
-                            <option value="100000021">Associate Graduation Scholarship</option>
-                            <option value="100000000">Academic Achievement &amp; Early Placement Scholarship</option>
-                            <option value="100000001">Amazon Employee Career Transition Scholarship</option>
-                            <option value="100000002">Bachelor's Scholarship</option>
-                            <option value="100000020">Certificate Graduation Scholarship</option>
-                            <option value="100000003">CIAT Graduate Scholarship</option>
-                            <option value="100000004">College of the Sequoias Transfer Scholarship</option>
-                            <option value="100000005">College Prep Scholarship</option>
-                            <option value="100000006">Delete the Divide Community Scholarship</option>
-                            <option value="100000007">Frontline Heroes Scholarship</option>
-                            <option value="100000008">Industry Scholarship</option>
-                            <option value="100000009">Merced College Transfer Scholarship</option>
-                            <option value="100000010">NAF Community Scholarship</option>
-                            <option value="100000011">Pell Grant Match Scholarship</option>
-                            <option value="100000012">Presidential Scholarship</option>
-                            <option value="100000013">San Diego Community College District Transfer Scholarship</option>
-                            <option value="100000014">San Diego Regional Chamber of Commerce Community Scholarship
-                            </option>
-                            <option value="100000015">Starbucks Employee Career Transition Scholarship</option>
-                            <option value="100000016">Target Employee Career Transition Scholarship</option>
-                            <option value="100000017">Transfer Scholarship</option>
-                            <option value="100000018">Walmart Employee Career Transition Scholarship</option>
-                            <option value="100000019">Women in Technology Scholarship</option>
+                            @foreach ($scholarshipOptions as $value => $label)
+                                <option value="{{ $value }}">{{ $label }}</option>`
+                            @endforeach
                         </select>
                     </div>
                     <fieldset>
@@ -215,58 +195,9 @@
                             <select id="state" name="state" required="" aria-required="true"
                                 class="bg-gray-400  rounded-md shadow-md p-2 w-full focus:outline-blue focus:ring-2 focus:ring-offset-1">
                                 <option value="">Choose a State</option>
-                                <option value="100000000">Alabama</option>
-                                <option value="100000001">Alaska</option>
-                                <option value="100000002">Arizona</option>
-                                <option value="100000003">Arkansas</option>
-                                <option value="100000004">California</option>
-                                <option value="100000005">Colorado</option>
-                                <option value="100000006">Connecticut</option>
-                                <option value="100000007">Delaware</option>
-                                <option value="100000050">District of Columbia</option>
-                                <option value="100000008">Florida</option>
-                                <option value="100000009">Georgia</option>
-                                <option value="100000010">Hawaii</option>
-                                <option value="100000011">Idaho</option>
-                                <option value="100000012">Illinois</option>
-                                <option value="100000013">Indiana</option>
-                                <option value="100000014">Iowa</option>
-                                <option value="100000015">Kansas</option>
-                                <option value="100000016">Kentucky</option>
-                                <option value="100000017">Louisiana</option>
-                                <option value="100000018">Maine</option>
-                                <option value="100000019">Maryland</option>
-                                <option value="100000020">Massachusetts</option>
-                                <option value="100000021">Michigan</option>
-                                <option value="100000022">Minnesota</option>
-                                <option value="100000023">Mississippi</option>
-                                <option value="100000024">Missouri</option>
-                                <option value="100000025">Montana</option>
-                                <option value="100000026">Nebraska</option>
-                                <option value="100000027">Nevada</option>
-                                <option value="100000028">New Hampshire</option>
-                                <option value="100000029">New Jersey</option>
-                                <option value="100000030">New Mexico</option>
-                                <option value="100000031">New York</option>
-                                <option value="100000032">North Carolina</option>
-                                <option value="100000033">North Dakota</option>
-                                <option value="100000034">Ohio</option>
-                                <option value="100000035">Oklahoma</option>
-                                <option value="100000036">Oregon</option>
-                                <option value="100000037">Pennsylvania</option>
-                                <option value="100000038">Rhode Island</option>
-                                <option value="100000039">South Carolina</option>
-                                <option value="100000040">South Dakota</option>
-                                <option value="100000041">Tennessee</option>
-                                <option value="100000042">Texas</option>
-                                <option value="100000043">Utah</option>
-                                <option value="100000044">Vermont</option>
-                                <option value="100000045">Virginia</option>
-                                <option value="100000046">Washington</option>
-                                <option value="100000051">Washington, D.C.</option>
-                                <option value="100000047">West Virginia</option>
-                                <option value="100000048">Wisconsin</option>
-                                <option value="100000049">Wyoming</option>
+                                @foreach ($stateOptions as $value => $label)
+                                    <option value="{{ $value }}">{{ $label }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="flex flex-col gap-y-4">
@@ -291,20 +222,9 @@
                         <select id="programInterest" name="programInterest" required="" aria-required="true"
                             class="bg-gray-400  rounded-md shadow-md p-2 w-full focus:outline-blue focus:ring-2 focus:ring-offset-1">
                             <option value="">Select a Program Interest</option>
-                            <option value="100000013">AI/ML</option>
-                            <option value="100000018">Business Administration</option>
-                            <option value="100000011">Cloud Administration</option>
-                            <option value="100000002">Cybersecurity</option>
-                            <option value="100000021">Digital Marketing</option>
-                            <option value="100000019">Healthcare Management</option>
-                            <option value="100000020">Human Resources</option>
-                            <option value="100000005">Information Technology</option>
-                            <option value="100000000">Networking</option>
-                            <option value="100000017">Project Management</option>
-                            <option value="100000001">Software Development</option>
-                            <option value="100000015">Web Development</option>
-                            <option value="100000016">Mobile App Development</option>
-                            <option value="100000014">Data Analytics</option>
+                            @foreach ($programOptions as $value => $label)
+                                <option value="{{ $value }}">{{ $label }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="flex flex-col gap-y-4">
@@ -317,44 +237,9 @@
                         <select id="admissionsAdvisor" name="admissionsAdvisor" required="" aria-required="true"
                             class="bg-gray-400  rounded-md shadow-md p-2 w-full focus:outline-blue focus:ring-2 focus:ring-offset-1">
                             <option value="">Choose an Admissions Advisor</option>
-                            <option value="100000000">I don't know/haven't been assigned one yet</option>
-                            <option value="100000001">Aaron Moreno</option>
-                            <option value="303950003">Avery Gibson</option>
-                            <option value="100000004">Alan Gardner</option>
-                            <option value="303950001">Amber Ferguson</option>
-                            <option value="303950002">Ashley Salido</option>
-                            <option value="303950021">Becca Thomason</option>
-                            <option value="303950004">Bianca Singer</option>
-                            <option value="303950005">Brooke Finney</option>
-                            <option value="303950030">Celina St Clair</option>
-                            <option value="100000007">Darrell Terry</option>
-                            <option value="303950007">Douglas Webb</option>
-                            <option value="303950009">Elizabeth Vasquez</option>
-                            <option value="303950031">Esther Edwards</option>
-                            <option value="100000008">Freddy Vargas</option>
-                            <option value="100000006">Grant Smith</option>
-                            <option value="303950010">Jerrell Powell</option>
-                            <option value="303950011">Joseph Hancock</option>
-                            <option value="303950032">Kat Maner</option>
-                            <option value="303950012">Katherine Lerma</option>
-                            <option value="303950013">Leslie Ochoa</option>
-                            <option value="100000005">Leonardo Cardenas</option>
-                            <option value="303950014">Mandy Manus</option>
-                            <option value="303950016">Max Rivas</option>
-                            <option value="303950029">Michael Morris</option>
-                            <option value="303950017">Michel Torres</option>
-                            <option value="303950018">Monica Herrera</option>
-                            <option value="100000002">Nancy Nguyen</option>
-                            <option value="100000003">Natalie Perkins</option>
-                            <option value="303950019">Noah Sturdevant</option>
-                            <option value="100000009">OnTay Johnson</option>
-                            <option value="303950020">Rachel Thiel</option>
-                            <option value="303950022">Rhea Ancheta</option>
-                            <option value="303950023">Ryan Larson</option>
-                            <option value="303950024">Sasha Dillon</option>
-                            <option value="303950025">Shelsey Emeish</option>
-                            <option value="303950026">Terrance Taylor</option>
-                            <option value="303950027">Tony Gana</option>
+                            @foreach ($advisorOptions as $value => $label)
+                                <option value="{{ $value }}">{{ $label }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="flex flex-col gap-y-8 my-4">
